@@ -1,17 +1,18 @@
 // npm modules
-import { Route, Routes } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
 // pages
 import StarshipList from './pages/StarshipList/StarshipList'
 import StarshipDetails from './pages/StarshipDetails/StarshipDetails'
 
-function App() {
-  const [count, setCount] = useState(0)
+// css
+import './App.css'
 
+function App() {
   return (
     <Routes>
-      <Route path='/' element={<StarshipList/>} />
-      {/* <Route path='/> */}
+      <Route path='/' element={<StarshipList/>}/>
+      <Route path='/:starshipId' element={<StarshipDetails/>}/>
     </Routes>
   )
 }
