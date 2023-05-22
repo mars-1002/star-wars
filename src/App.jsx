@@ -1,5 +1,5 @@
 // npm modules
-import { Routes, Route } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 
 // pages
 import StarshipList from './pages/StarshipList/StarshipList'
@@ -12,7 +12,7 @@ function App() {
   return (
     <Routes>
       <Route path='/' element={<StarshipList/>}/>
-      <Route path='/:starshipId' element={<StarshipDetails/>}/>
+      <Route path='/starships/https://swapi.dev/api/starships/:starshipId' element={<StarshipDetails />} />
     </Routes>
   )
 }
